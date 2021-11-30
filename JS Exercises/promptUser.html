@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Simple Form</h1>
+      <p>Your Name is: <span id="name"></span></p>
+      <p>Your Age is: <span id="age"></span></p>
+    <script>
+         var name = prompt('Input your name: ');
+         var age = prompt('Input yours Age: ')
+
+         document.getElementById('name').innerHTML = name;
+         document.getElementById('age').innerHTML = age;
+    </script>
+
+</body>
+</html>

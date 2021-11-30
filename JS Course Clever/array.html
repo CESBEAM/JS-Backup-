@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let fruit = ['banana','apple','orange,','pineapples']
+       fruits = new Array('banana','apple','orange','pineapples')
+         
+        fruits[0] = 'pear';
+        console.log(fruits); 
+
+        for (let i = 0; i < fruits.length; i++){
+            console.log(fruits[i])
+        }
+
+        //array common methods
+        console.log('to string:',fruits.toString());
+        console.log(fruits.join('-'));
+        console.log(fruits.pop(), fruits);
+        console.log(fruits.push('vanilla'), fruits);
+
+    
+        fruits.shift();
+        console.log(fruits);
+        fruits.unshift('kiwi');
+        console.log(fruits);
+
+
+        let vegetables = ['pumpkins','tomato','eggplant'];
+        let container = fruits.concat(vegetables);
+        console.log(container);
+
+        console.log(container.slice(1,4));
+        console.log(container.reverse());
+        console.log(container.sort());
+
+
+        let someNumbers = [15,74,10,9,8,7,6,5,3,4,1,2,29,34,4,2,53];
+        console.log(someNumbers.sort(function(a, b){return a-b})); //sorted in ascending order
+        console.log(someNumbers.sort(function(a,b){return b-a})); //descending order
+
+
+        let emptyArray = new Array();
+        for (let num=0; num <= 10; num++){
+            emptyArray.push(num);
+        }
+        console.log(emptyArray);
+
+
+
+    </script>
+</body>
+</html>

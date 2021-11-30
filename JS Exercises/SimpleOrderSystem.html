@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCDO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+     <style>
+
+         body{
+            background: #D89216;
+            height: 100vh;
+         }
+        
+         h1{
+             font-family: sans-serif;
+             color: rgb(240, 236, 236);
+             padding: 10px;
+         }
+
+         .logo{
+            align-items: center;
+             
+         }
+          .meal {
+              
+              text-align: center;
+              background: #E1D89F;
+              color: #374045;
+              font-family: sans-serif;
+              font-size: 20px;
+              padding: 5px;
+              width: 60%;
+              border: rgb(255, 255, 255) solid 5px;
+              
+          }
+
+          .selection{
+              
+           text-align: justify;
+           background: #E1D89F;
+           color: #374045;
+           font-family: sans-serif;
+           font-size: 20px;
+           padding: 10px;
+           width: 60%;
+           border: rgb(255, 255, 255) solid 5px;
+           
+          }
+
+          .input-bar{
+              padding: 5px;
+
+          }
+          .btn-buy{
+              padding: 5px;
+          }
+
+          #output{
+              font-size: 25px;
+              font-family: sans-serif;
+            
+            
+              padding: 15px;
+          }
+
+     </style>
+<body>
+    <h1 id="money">₱500 </h1>
+
+    <div class="main">
+    
+    <div class="meal">
+    <h2>Meal Menu:</h2>
+    <div class="logo">
+    <img src="images/mcdonalds.png" class="mclogo" width="150" height="150">
+</div>
+</div>
+
+
+     
+    <div class="selection">
+
+    <p><b>MC 1</b>: Mcshare Chicken - ₱299</p>
+    <p><b>MC 2</b>: Mcshare Burger - ₱209</p>
+    <p><b>MC 3</b>: McSpaghetti Platter - ₱220</p>
+    <p><b>MC 4</b>: Mcshare Chicken Fillet - ₱55</p>
+    <p><b>MC 5</b>: Mcshare Fillet Ala king - ₱59</p> 
+    
+    </div>
+
+</div>
+    <input type="number" class="input-bar">
+
+    <button class="btn-buy" onclick="meal1()">MC 1</button>
+    <button class="btn-buy" onclick="meal2()">MC 2</button>
+    <button class="btn-buy" onclick="meal3()">MC 3</button>
+    <button class="btn-buy" onclick="meal4()">MC 4</button>
+    <button class="btn-buy" onclick="meal5()">MC 5</button>
+    <div id="output"></div>
+
+</body>
+    <script>
+        
+
+         function meal1(){
+             var money = 500;
+             var meal = 299;
+             var result = money - meal;
+           
+            document.getElementById('output').innerHTML = "You order MC 1, your total money is ₱"+result
+            document.getElementById('money').innerHTML ='₱'+result
+         }    
+
+         function meal2(){
+             var money = 500;
+             var meal = 209;
+             var result = money - meal;
+            
+            document.getElementById('output').innerHTML = "You order MC 2, your total money is ₱"+result
+            document.getElementById('money').innerHTML = '₱' +result
+         }    
+
+         function meal3(){
+             var money = 500;
+             var meal = 220;
+             var result = money - meal;
+           
+            document.getElementById('output').innerHTML = "You order MC 3, your total money is ₱"+result
+            document.getElementById('money').innerHTML = '₱' +result
+         } 
+
+         function meal4(){
+             var money = 500;
+             var meal = 55;
+             var result = money - meal;
+            
+            document.getElementById('output').innerHTML = "You order MC 4, your total money is ₱"+result
+            document.getElementById('money').innerHTML = '₱' +result
+         } 
+
+         function meal5(){
+             var money = 500;
+             var meal = 59;
+             var result = money - meal;
+            
+            document.getElementById('output').innerHTML = "You order MC 2, your total money is ₱"+result
+            document.getElementById('money').innerHTML = '₱' +result
+         } 
+    </script>
+</html>

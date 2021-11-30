@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        let student = {
+            first: 'smosh', 
+            last: 'Black', 
+            age: 18,
+            studentNumber: 2019500974,
+            birthday: 'May 28 2000',
+            
+            studentInfo: function(){
+                return this.first + '\n' +this.last + '\n' +this.studentNumber;
+            }    
+         };
+
+        //console.log(student.first);
+        //console.log(student.last);
+        // console.log(student.age);
+        // console.log(student.studentNumber);
+        // console.log(student.birthday);
+        // student.first = 'notSmosh'; //change value
+        // console.log(student.first);
+        console.log(student.studentInfo());
+    </script>
+</html>

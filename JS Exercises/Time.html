@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(26, 24, 24);
+        }
+        #clock{
+            color: white;
+            margin: 0 50px;
+            text-align: center;
+            font-size: 150px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #date{
+            color: white;
+            margin: 0 50px;
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="clock"></div>
+   </center>
+
+   <div id="date"></div>
+</body>
+
+<script>
+     
+     setInterval(displayClock,500);
+
+     function displayClock(){
+
+     var time = new Date();
+     var hours = time.getHours();
+     var minutes = time.getMinutes();
+     var seconds = time.getSeconds();
+     var dayNight = "PM";
+
+     if(time > 12){
+         hours = hours - 12;
+         dayNight = "PM"
+     }
+     if(time == 0){
+         hours = 12
+     }
+     if(time < 10){
+         hours = '0' + hours;
+     }
+     if(time < 10){
+         minutes = '0' + minutes;
+     }
+     if(time < 10){
+         seconds = '0' + seconds;
+     }
+
+     document.getElementById('clock').innerHTML = hours + ":" +minutes+ ":" +seconds+" "+dayNight; 
+     }
+     
+      
+
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+
+document.getElementById('date').innerHTML = mm + '/' + dd + '/' + yyyy;
+
+
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const contactLists =[{
+        studID: 2019500974,
+        studName: "Francis Beam Santander",
+        studCourse: "BSIT",
+        studYear: 3
+    },
+    {
+        studID: 2019540174,
+        studName: "Anna Williams",
+        studCourse: "BSIT",
+        studYear: 3
+    },
+      { 
+        studID: 2019240112,
+        studName: "Juan Delacruz",
+        studCourse: "BEED",
+        studYear: 3
+      }]
+   
+      /*
+        for(i=0; i < contactList.length; i++){
+         
+            console.log(contactList[i].studName)
+     
+            console.log(contactList[i].studID)
+
+            console.log(contactList[i].studCourse)
+
+            console.log(contactList[i].studYear)
+        }
+      */
+     
+      for(let contactList of contactLists){
+
+        console.log(contactList.studID);
+      }
+
+      //select BEED only
+      const contactListsBook = contactLists.filter(function(contactLists){
+
+        return contactLists.studCourse =="BEED";
+    });
+    console.log(contactListsBook);
+
+    const contactListsJSON = JSON.stringify(contactLists);
+
+    console.log(contactListsJSON)
+    
+
+
+
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YESTERDAY</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+    
+    *{
+      background-color: #222831;
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1{
+        margin: 20px;
+        color: #FC5185;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 35px;
+    }
+
+   
+
+    .main{
+        margin: 25px;
+        display: flex;
+        text-align: center;
+        width: 50%;
+        font-size: 40px;
+        background-color: #F5F5F5;
+        padding: 20px;
+    }
+    .main > div{ 
+        
+        padding:  10px;  
+    }
+    .main > div > div{
+      background-color: #F5F5F5;
+      padding: 20px;
+    }
+
+    
+</style>
+
+<body>
+     
+    <h1>YESTERDAY IS TODAY</h1>
+
+
+    <div class="main">
+        <div>
+    <div id="day">
+       </div>
+       <div id="clock">
+    </div>
+    </div>
+    
+   
+    </div>
+    
+</body>
+
+   <script>
+        var today = new Date();
+       
+        var month = today.getMonth();
+        var day = today.getDay();
+        var date = today.getDate();
+        var year = today.getFullYear();
+         
+        monthList = [" January"," February"," March"," April"," May"," June"," July"," August"," September"," October"," November"," December",];
+
+        dayList = ["Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,"];
+        
+        document.getElementById('day').innerHTML = dayList[day] +monthList[month] +' '+ date +' '+year
+
+        // console.log('Today is: '+dayList[day]+ ' '+monthList[month]+ ' ' +date+ ' '+year);
+        
+
+        setInterval(displayclock, 500)
+        
+        function displayclock(){
+        var time = new Date();
+
+        var hrs = time.getHours();
+        var mns = time.getMinutes();
+        var sec = time.getSeconds();
+        dayTime = "AM"; 
+
+        if (hrs >=12){
+           hrs = hrs - 12;
+           dayTime = "PM";
+        }
+
+        if(hrs == 0){
+            hrs = 12;
+        }
+
+        document.getElementById('clock').innerHTML = hrs +' : ' +mns+ ' : '+ sec +' '+dayTime;
+            
+    }
+
+
+
+   </script>
+</html>
