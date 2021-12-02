@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="zero" class="apple">Apple</li>
+        <li id="one" class="banana">Banana</li>
+        <li id="two" class="grapes">Grapes</li>
+        <li id="three" class="oranges">Oranges</li>
+    </ul>
+</body>
+    <script>
+        //add Element
+        newFruit = document.createElement('li');
+        newFruit.setAttribute('id','four');
+        newFruit.setAttribute('class','potato');
+        newText = document.createTextNode('potato');
+        newFruit.appendChild(newText);
+
+        place = document.getElementsByTagName('ul')[0];
+        place.appendChild(newFruit);
+
+        newFruit1 = document.createElement('li');
+        newFruit1.setAttribute('id', 'five');
+        newFruit.setAttribute('class', 'mango');
+        newText1 = document.createTextNode('Mango');
+        newFruit1.appendChild(newText1)
+
+        place1 = document.getElementsByTagName('ul')[0];
+        place1.appendChild(newFruit1);
+
+
+        newFruit2 = document.createElement('li');
+        newFruit2.setAttribute('id', 'six');
+        newFruit2.setAttribute('class', 'tomato');
+        newText2 = document.createTextNode('tomato');
+        newFruit2.appendChild(newText2);
+
+        place2 = document.getElementsByTagName('ul')[0]
+        place2.appendChild(newFruit2);
+
+
+        newFruit3 = document.createElement('li');
+        newFruit3.setAttribute('id','seven');
+        newFruit3.setAttribute('class', 'Eggplant');
+        newText3 = document.createTextNode('Egg plant');
+        newFruit3.appendChild(newText3);
+
+        place3 = document.getElementsByTagName('ul')[0]
+        place3.appendChild(newFruit3);
+
+
+        newFruit4 = document.createElement('li');
+        newFruit4.setAttribute('id', 'eight');
+        newFruit4.setAttribute('class', 'watermelon')
+        newText4 = document.createTextNode('Water Melon');
+        newFruit4.appendChild(newText4);
+
+        place4 = document.getElementsByTagName('ul')[0];
+        place4.appendChild(newFruit4);
+
+        removeFruit = document.getElementsByTagName('li')[0];
+        containRemove = removeFruit.parentNode;
+        containRemove.removeChild(removeFruit)
+    </script>
+</html>

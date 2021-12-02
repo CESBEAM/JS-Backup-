@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id = "close"><a href="#">Close X</a></div>
+</body>
+   <script>
+       var msg = ' '; 
+      
+       msg +='<div><h2>SYSTEM MAINTENANCE</h2>';
+       msg += 'Our servers are being updated between 3 and 4 AM.';
+       msg += 'During this time, there may be minor disruptions to service.</div>'
+
+       note = document.createElement('div');
+       note.setAttribute('id', 'note');
+       note.innerHTML = msg;
+       document.body.appendChild(note);
+
+       function dismissNote(){
+           document.body.removeChild(note);
+       }
+
+       close = document.getElementById('close');
+       close.addEventListener('click',dismissNote,false);
+   
+    // var msg = ''; 
+    
+    // msg += "<div>this is div test</div>";
+    // msg += "<p>This is <b>Example P Tag</b></p>";
+    // msg += "<br>break test"
+
+    // note = document.createElement('div');
+    // note.setAttribute('class', 'main');
+    // note.innerHTML = msg;
+    // document.body.appendChild(main);
+   
+   </script>
+</html>

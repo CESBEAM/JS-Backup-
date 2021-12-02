@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Username<input type="text" id="username" onblur="checkUsername()" >
+    <div id="feedback"></div>
+    Password<input type="text" class="inputPass">
+    <button>Submit</button>
+</body>
+    <script>
+        function checkUsername(){
+            var msg = document.getElementById('feedback');
+            if(this.value.lenght < 5){
+                msg.textContent = 'Username must be 5 characters or more';
+            }else{
+                msg.textContent = '';
+            }
+        }
+
+        var elUsername = document.getElementById('username');
+        elUsername.onblur = checkUsername;
+    </script>
+</html>

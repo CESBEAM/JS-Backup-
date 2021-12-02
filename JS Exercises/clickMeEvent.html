@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background-color: white;
+    }
+</style>
+<body>
+    <img src="images/mcdonalds.png" id="image" alt="mcdo" width="100" height="100">
+    <br>
+    <button id="btn" onclick="handleClick(this)">Click me</button>
+</body>
+<script> 
+    function handleClick(element){
+      element.style = "background:blue;"
+    }
+
+    // var image = document.getElementById("image");
+    // image.addEventListener("mouseover", function(){
+    //     this.style = "box-shadow: 2px 2px 2px gray";
+    //     this.width = "120"
+    // 
+    // });
+
+    // image.addEventListener("mouseout", function(){
+    //    this.width = "100"
+    // });
+
+    var button = document.getElementById('btn');
+    button.addEventListener("mouseover", function(){
+       
+        this.style = "background-color: red"
+    })
+
+    button.addEventListener("mouseout", function(){
+        this.style = "background-color: white"
+    })
+
+
+</script>
+</html>

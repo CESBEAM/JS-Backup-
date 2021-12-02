@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+       #zero{
+        background: blue;   
+       }
+       #one{
+           background: red;
+       }
+       #two{
+           background: yellow;
+       }
+       
+       #three{
+           background: green;
+       }
+
+       #four{
+           background: pink;
+       }
+       
+       
+       
+   </style>
+<body>
+    <h1>Any colour you like</h1>
+    <ul>
+        <li id="zero" class="blue" >Blue</li>
+        <li id="one" class="red">Red</li>
+        <li id="two" class="yellow">Yellow</li>
+        <li id="three" class="green">Green</li>
+        
+    </ul>
+    
+    <div id="getAcolor">
+       Color: 
+    </div>
+    
+</body>
+    <script> 
+      newEl = document.createElement('li');
+      newEl.setAttribute('id', 'four')
+      newEl.setAttribute('class', 'pink')
+      newText = document.createTextNode('pink');
+      newEl.appendChild(newText);
+      
+      position = document.getElementsByTagName('ul')[0];
+      position.appendChild(newEl);
+
+      //removing Element
+      removeEl = document.getElementsByTagName('li')[1];
+      containEl = removeEl.parentNode;
+      containEl.removeChild(removeEl);
+      
+
+    </script>
+</html>

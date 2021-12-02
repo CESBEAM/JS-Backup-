@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+       #zero{
+        background: blue;   
+       }
+       #one{
+           background: red;
+       }
+       #two{
+           background: yellow;
+       }
+       
+       #three{
+           background: green;
+       }
+       
+       #four{
+           background: violet;
+       }
+       
+       
+   </style>
+<body>
+    <h1>Any colour you like</h1>
+    <ul class="colorList">
+        <li id="zero" class="blue" >Blue</li>
+        <li id="one" class="red">Red</li>
+        <li id="two" class="yellow">Yellow</li>
+        <li id="three" class="green">Green</li>
+        <li id="four" class="violet">Violet</li>
+    </ul>
+    
+    <div id="getAcolor">
+       Color: 
+    </div>
+    
+</body>
+    <script> 
+        
+        // var colourList = ['blue','red','yellow','green','violet'];
+        
+        // // getModClassname
+        // colour1 = document.getElementById('zero');
+        // colour1.className = 'thisIsZero';
+
+        // colour2 = document.getElementById('one');
+        // colour2.className = 'thisIsOne';
+        
+        // //getTagElements
+        // colour3 = document.getElementsByTagName('li')
+        // if(colour3.length > 2){
+        //     get = colour3[2];
+        //     get.className = 'thisIsTwo';
+        // }
+        
+        // //getTagElements
+        // colour4 = document.getElementsByTagName('li')
+        // if(colour3.length > 3){
+        //     el = colour3[3];
+        //     el.className = 'thisIsThree';
+        // }
+         
+        // //getTagElements
+        // colour5 = document.getElementsByTagName('li')
+        // if(colour5.length > 4){
+        //     get = colour5[4]
+        //     get.className = "thisIsFour"
+        // }
+
+        //JquerySelector
+        colour1 = document.querySelector('li.yellow');
+        colour1.className = 'thisIsYellow';
+
+        colour2 = document.querySelector('li.red')
+        if(colour2.length > 1)
+             get = colour2[1];
+             get.className = 'thisIsRed'; 
+
+
+
+
+    
+        
+
+        
+   
+          
+         
+    </script>
+</html>
