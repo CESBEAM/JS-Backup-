@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>current date</title>
+    <style>
+       
+        .current{
+            font-family: arial;
+            font-size: 50px;
+            text-align: center;
+        }
+        #date{
+            font-family: arial;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="current">
+        Current Date
+    </div>
+    <div id="date"></div>
+    </div>
+</body>
+<script>
+    var today = new Date();
+
+    var month = today.getMonth()+1;
+    var day = today.getDate();
+    var year = today.getFullYear();
+
+    if(day < 10){
+        day='0'+day;
+    }
+
+    if(month < 10){
+        month='0'+month;
+    }
+    
+    document.getElementById("date").innerHTML = month+' '+day+' '+year;
+    
+</script>
+</html>
