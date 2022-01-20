@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(129, 129, 129);
+            font-family: poppins;
+            color: black;
+            font-weight: bold;
+            padding: 2em;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+        }
+
+        ul{
+            list-style: none;
+        }
+        li{
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        #zero{
+            background: blue;
+        }
+        #one{
+            background: red;
+        }
+        #two{
+            background: green;
+        }
+        #three{
+            background: orange;
+        }
+
+        #four{
+           background:violet;
+        }
+
+        .DOMyellow{
+            background: rgb(199, 35, 158);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header" class="head">Colors</h1>
+
+    <input id = "search" type="text" placeholder="search">
+    <input type="submit" placeholder="submit">
+    <h2 class="any">Any Color you like</h2>
+    <ul class="listcolors">
+        <li id = "zero" class="group-list">Blue</li>
+        <li id = "one" class="group-list">Red</li>
+        <li id = "two" class="group-list">Green</li>
+        <li id = "three" class="group-list">Orange</li>
+    </ul>
+</body>
+<script>
+
+//    color1 = document.getElementsByTagName('li');
+//    get = color1[3];
+//    get.className = 'DOMyellow';
+
+// color1 = document.querySelector('li.blue');
+// color1.className = 'dom';
+
+// color2 = document.querySelector('li.green')
+// color2.className ='DOMyellow'
+
+
+// color3 = document.getElementById('three')
+// color3.setAttibute('class','four')
+
+//Accessing & changing a text node
+// var yellow = document.getElementById('one');
+// var text = yellow.firstChild.nodeValue;
+
+// text = text.replace = ('DOM!!!');
+// yellow.firstChild.nodeValue=text;
+
+//Accessing & changing the text
+// var headerTitle = document.getElementById('header');
+// console.log(header);
+// headerTitle.textContent = 'DOM!!!';
+
+// var colorTwo = document.getElementById('two');
+// console.log(colorTwo);
+// colorTwo.textContent = 'DOM!!!';
+
+//get element Classname using query
+// var listItems = document.getElementsByClassName('group-list');
+// console.log(listItems);
+// console.log(listItems[1]);
+
+// listItems[1].textContent = 'DOM!!!'
+// listItems[1].style.borderBottom ='5px white solid'
+// listItems[1].style.color = 'white';
+// listItems[1].style.fontWeight = '1'
+// listItems[1].style.background = "green";
+
+// for(var i =0; i <listItems.length; i++){
+//     listItems[i].style.background = "pink";
+// }
+
+//query Selector
+// var header = document.querySelector('#header');
+// header.style.borderBottom="solid 4px white";
+
+// var color = document.querySelector('#search');
+// color.value = 'hello'
+
+// var search = document.querySelector('#search');
+// search.value = "Search";
+
+// var submit = document.querySelector('input[type=submit]');
+// submit.value = "DOM!"
+
+// var color = document.querySelector('.group-list');
+// color.style.color ="white";
+
+// var color = document.querySelector('.group-list:last-child');
+// color.style.color ="white";
+
+// var secondColor = document.querySelector('.group-list:nth-child(2)');
+// secondColor.style.color = "white";
+
+//query selectorall
+// var head = document.querySelectorAll('.head')
+// console.log(head)
+
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// var even = document.querySelectorAll('li:nth-child(even)');
+
+// for(var i=0; i< odd.length; i++){
+//     odd[i].style.backgroundColor = "white";
+//     even[i].style.backgroundColor = "orange"
+//}
+
+var changeTitle = document.querySelector('#header')
+changeTitle.textContent = "Any Colour You Like"
+console.log(changeTitle)
+
+//create new div
+var newDiv = document.createElement('div')
+newDiv.className = "hi";
+newDiv.id = "hello";
+newDiv.setAttribute('title','this is title');
+
+var newDivText = document.createTextNode('Pink Floyd');
+newDiv.appendChild(newDivText);
+
+var h1 = document.querySelector('#header h1')
+
+var headTitle = document.querySelector('#header')
+headTitle.insertBefore (newDiv ,h1);
+newDiv.style.color = "pink";
+
+
+var removeAny = document.querySelector('.any')
+removeAny.remove();
+
+
+
+
+
+
+
+console.log(newDiv)
+
+
+</script>
+</html>

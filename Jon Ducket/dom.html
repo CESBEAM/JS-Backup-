@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewer Bros</title>
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url('home-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: poppins;
+}
+
+header{
+    overflow: hidden;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 15%;
+    
+}
+li, a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color:white;
+    text-decoration: none;
+}
+
+.logo-sec img{
+    cursor: pointer;
+    color: white;
+    width: 60%;
+}
+
+.logo-text{
+    text-align: center;
+}
+
+.navi-sec
+{
+    list-style: none;
+    text-align: center;
+}
+
+.navi-sec li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navi-sec li a{
+    transition: all 0.3s ease 0s;
+}
+
+.navi-sec li a:hover{
+    color: #DA0037;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "best-coffee head-content1"
+    "best-coffee text-content1 ";
+}
+
+
+.best-coffee{
+    grid-area: best-coffee;
+    color: white;
+    
+    padding-top: 19em;
+    padding-left: 7em;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.button-sec{
+    margin-top: 2em;
+    
+}
+
+.button-sec button{
+    padding: 1em 1em;
+    width: 15em;
+    background: #F3971A;
+    border-radius: 1.2em;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.head-content1{
+    grid-area: head-content1;
+    color: white;
+
+    padding-top: 8em;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 9em;
+}
+
+.text-content1{
+    grid-area: text-content1;
+    color: white;
+
+    text-align: center;
+    padding: 0 5em;
+    font-size: .9rem;
+    margin-right: 12em;
+}
+
+button:hover{
+    background: #DA0037;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <header>
+        <div class="logo-sec">
+            <img src="logo.png" alt="">
+         
+        </div>
+        <div class="navi-sec">
+                <ul>
+                <li id = "login"><a href="/login.php">Login<span style="display: none;">123</span></a></li>
+                <li><a href="/register.php">Sign up</a></li>
+               </ul>
+        </div>
+    </header>
+
+        <div class="main-content">
+
+            <div class="best-coffee">
+                <h2>Take a sip on our best coffee!</h2>
+
+                <div class="button-sec">
+                    <a href="order.php"><button>Order Online</button></a>
+                    <a href="menu.php"><button>Menu</button></a>
+                </div>
+            </div>
+
+            
+           
+            <div id="qualityCoff" class="head-content1">
+                <h2>QUALITY COFFEES TESTED DAILY</h2>
+            </div>
+
+            <div class="text-content1">
+                QUALITY COFFEES TESTED DAILY
+                Our goal is to make our coffee a memorable addition to any experience, and to make the act of preparing and enjoying a cup of our coffee an experience in and of itsel.
+            </div>
+    </div>
+  </div>
+</body>
+<script>
+//    console.log(document.getElementById('login'));
+
+//accessing using innertext and textcontent
+// var login = document.getElementById('login');
+// console.log(login.innerText);
+
+//Accessing DOM with Inner HTML
+// var headTitle = document.getElementById('qualityCoff');
+// console.log(headTitle);
+// headTitle.innerHTML = '<h4>WOW!!!</h4>';
+
+//Accessing DOM changing the style
+// headTitle.style.fontFamily = 'arial';
+// headTitle.style.background='black';
+
+//get Classname
+
+</script>
+</html>
