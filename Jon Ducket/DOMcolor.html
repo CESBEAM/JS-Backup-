@@ -61,6 +61,9 @@
         <li id = "two" class="group-list">Green</li>
         <li id = "three" class="group-list">Orange</li>
     </ul>
+
+    <br>
+    <button class="btn-dark" id="button">Click here</button>
 </body>
 <script>
 
@@ -143,30 +146,51 @@
 //     even[i].style.backgroundColor = "orange"
 //}
 
-var changeTitle = document.querySelector('#header')
-changeTitle.textContent = "Any Colour You Like"
-console.log(changeTitle)
 
-//create new div
-var newDiv = document.createElement('div')
-newDiv.className = "hi";
-newDiv.id = "hello";
-newDiv.setAttribute('title','this is title');
+// var changeTitle = document.querySelector('#header')
+// changeTitle.textContent = "Any Colour You Like"
+// console.log(changeTitle)
 
-var newDivText = document.createTextNode('Pink Floyd');
-newDiv.appendChild(newDivText);
+// //create new div
+// var newDiv = document.createElement('div')
+// newDiv.className = "hi";
+// newDiv.id = "hello";
+// newDiv.setAttribute('title','this is title');
 
-var h1 = document.querySelector('#header h1')
+// var newDivText = document.createTextNode('Pink Floyd');
+// newDiv.appendChild(newDivText);
 
-var headTitle = document.querySelector('#header')
-headTitle.insertBefore (newDiv ,h1);
-newDiv.style.color = "pink";
+// var h1 = document.querySelector('#header h1')
+
+// var headTitle = document.querySelector('#header')
+// headTitle.insertBefore (newDiv ,h1);
+// newDiv.style.color = "pink";
 
 
-var removeAny = document.querySelector('.any')
-removeAny.remove();
+// var removeAny = document.querySelector('.any')
+// removeAny.remove();
 
-console.log(newDiv)
+// console.log(newDiv)
+
+
+
+// //lets add text using DOM
+// var divDavid = document.createElement('div');
+// divDavid.className = "classDavid";
+// divDavid.id = "idDavid";
+
+
+// var davidText = document.createTextNode('David Gilmour');
+// divDavid.appendChild(davidText);
+
+// var author = document.querySelector('#header  author')
+
+// var guitarist=document.querySelector('#header')
+// guitarist.insertBefore(divDavid, author)
+
+// console.log(divDavid)
+
+
 
 
 </script>
