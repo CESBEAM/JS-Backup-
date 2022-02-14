@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="items" id="listItems">
+        <ul id ="ulItems">
+            <li>Milk
+                <button class ="milkClass" id="list-milk" >Add to cart</button>
+            </li>
+            <li>Egg
+                <button class ="eggClass"  id="list-egg">Add to cart</button>
+            </li>
+            <li>Bread
+                <button class ="breadClass"  id="list-bread">Add to cart</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="output"></div>
+</body>
+
+<script>
+
+//     var item1 = document.getElementById('listItems')
+
+//     var item2 = document.getElementById('listItems')
+
+//     var item3 = document.getElementById('listItems')
+
+//     //event
+//     //milk
+//     item1.addEventListener('click',addItems1);
+//     item1.addEventListener('click',removeItem1);
+
+//     //egg
+//     item2.addEventListener('click',addItems2);
+//     item2.addEventListener('click',removeItem2);
+
+//     //bread
+//     item3.addEventListener('click',addItems3);
+//     item3.addEventListener('click',removeItem3);
+
+
+//     function addItems1(e){
+//         if(e.target.classList.contains('milkClass')){
+            
+//             var addList1 = document.createElement('li');
+//             addList1.className = "added1";
+//             addList1.appendChild(document.createTextNode('MILK'));
+
+//             var deleteBtn1 = document.createElement('button');
+//             deleteBtn1.className = "delete-button";
+//             deleteBtn1.appendChild(document.createTextNode('Remove'));
+
+
+//             addList1.appendChild(deleteBtn1);
+//             item1.appendChild(addList1);
+//         }
+//     }
+
+
+//     function removeItem1(e){
+//         if(e.target.classList.contains('delete-button')){
+//             var addList1 = e.target.parentElement
+//             item1.removeChild(addList1)
+//         }
+//     }
+
+
+//     function addItems2(e){
+//         if(e.target.classList.contains('eggClass')){
+            
+//             var addList2 = document.createElement('li');
+//             addList2.className = "added2";
+//             addList2.appendChild(document.createTextNode('EGG'));
+
+//             var deleteBtn2 = document.createElement('button');
+//             deleteBtn2.className = "delete-button";
+//             deleteBtn2.appendChild(document.createTextNode('Remove'));
+
+
+//             addList2.appendChild(deleteBtn2);
+//             item2.appendChild(addList2);
+//         }
+//     }
+
+
+//     function removeItem2(e){
+//         if(e.target.classList.contains('delete-button')){
+//             var addList2 = e.target.parentElement
+//             item2.removeChild(addList2)
+//         }
+//     }
+
+
+//    function addItems3(e){
+//         if(e.target.classList.contains('breadClass')){
+            
+//             var addList3 = document.createElement('li');
+//             addList3.className = "added3";
+//             addList3.appendChild(document.createTextNode('BREAD'));
+
+//             var deleteBtn3 = document.createElement('button');
+//             deleteBtn3.className = "delete-button";
+//             deleteBtn3.appendChild(document.createTextNode('Remove'));
+
+
+//             addList3.appendChild(deleteBtn3);
+//             item3.appendChild(addList3);
+//         }
+//     }
+
+
+//     function removeItem3(e){
+//         if(e.target.classList.contains('delete-button')){
+//             var addList3 = e.target.parentElement
+//             item3.removeChild(addList3)
+//         }
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function milk(){
+    //     var display = document.getElementById('output')
+    //     display.innerHTML = "<button>MILK</button> x";
+    // }
+
+    // function egg(){
+    //     var display = document.getElementById('output')
+    //     display.innerHTML = "<button>EGG</button> x";
+    // }
+
+    // function bread(){
+    //     var display = document.getElementById('output')
+    //     display.innerHTML = "<button>BREAD</button> x";
+    // }
+
+
+
+       
+        var item = document.getElementById('listItems')
+
+            //event
+    //onClickSelect
+    item.addEventListener('click',addItems).value;
+    item.addEventListener('click',removeItem);
+
+
+    function addItems(e){
+        if(e.target){
+            
+            var addList = document.createElement('li');
+            addList.className = "added";
+            addList.appendChild(document.createTextNode(e.target.item));
+
+            var deleteBtn = document.createElement('button');
+            deleteBtn.className = "delete-button";
+            deleteBtn.appendChild(document.createTextNode('Remove'));
+
+
+            addList.appendChild(deleteBtn);
+            item.appendChild(addList);
+        }
+    }
+
+
+    function removeItem(e){
+        if(e.target.classList.contains('delete-button')){
+            var addList = e.target.parentElement
+            item.removeChild(addList)
+        }
+    }
+</script>
+</html>
