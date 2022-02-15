@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Restaurant</h1>
+        
+        <div class="content">
+            <h3>MENU:</h3>
+            <h4 id="money">$: 120</h4>
+            
+            <div id="menu">
+                <ul>
+                    <li id="meal1">1.Sisig - 50</li>
+                    <li id="meal2">2.Burger - 10</li>
+                    <li id="meal3">3.Hotsilog - 20</li>
+                    <li id="meal4">4.Spaghetti - 12</li>
+                    <li id="meal5">5.Adobo - 20</li>
+                </ul>
+
+                <form id="orderForm" >
+                    <label for="">Choose your order: </label>
+                    <input type="number" id="placeOrder" placeholder="Place your order" required>
+                    <br>
+                    <label for="">Quanty: </label>
+                    <input type="number" id="quantyOrder" placeholder="Place your quanty" required>
+                    <br>
+                    <input type="submit" id="btnOrder" value="ORDER" onclick="orderButton()">
+                </form>
+                <br>
+
+                <div id="output">Your Order: </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="restau.js"></script>
+</html>
