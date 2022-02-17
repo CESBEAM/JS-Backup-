@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center mb-5">
+          <i class="fas fa-book-open text-primary"></i> Employee <span class="text-primary">Management </span>List</h1>
+          <form id="employee-form">
+            <div class="form-group">
+              <label for="number">Employee Number#:</label>
+              <input type="text" id="number" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name">Employee Name:</label>
+              <input type="text" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="age">Employee Age:</label>
+              <input type="text" id="age" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="gender">Employee Gender:</label>
+                <input type="text" id="gender" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="level">Employee Level:</label>
+                <input type="text" id="level" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="company">Employee Company:</label>
+                <input type="text" id="company" class="form-control">
+              </div>
+            <input type="submit" value="Add Employee" class="btn btn-primary btn-block mt-5">
+          </form>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Employee #</th>
+                <th>Employee Name</th>
+                <th>Employee Age</th>
+                <th>Employee Gender</th>
+                <th>Employee Level</th>
+                <th>Employee Company</th>
+              </tr>
+            </thead>
+            <tbody id="employee-list"></tbody>
+          </table>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
