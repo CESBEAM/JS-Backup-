@@ -4,7 +4,7 @@
       e.preventDefault();
       var codename = document.querySelector('#codename').value;
       var password =   document.querySelector('#password').value;
-        if(codename ==='CIA' || password ==='052800'){
+        if(codename ==='CIA' && password ==='052800'){
             location.href = "screen.html";
         }else if(codename ===''|| password ===''){
             var codename = document.querySelector('#codename').value ='';
@@ -23,6 +23,9 @@
             setTimeout(()=>document.querySelector('.alert').remove(),3000);
 
         }else{
+
+           var codename = document.querySelector('#codename').value="";
+           var password = document.querySelector('#password').value="";
            const div = document.createElement('div');
            div.className = `alert danger`;
            div.appendChild(document.createTextNode("You're Already Dead"));
@@ -35,4 +38,4 @@
            const form = document.querySelector('#account-form')
            container.insertBefore(div,form);
         }
-}
+    }
