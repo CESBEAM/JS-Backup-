@@ -58,3 +58,20 @@
 // console.log(result);
 
 
+
+//Add Items to an Array with push() and unshift()
+// let twentyThree = 'XXIII';
+// let romanNumerals = ['XXI', 'XXII'];
+
+
+// romanNumerals.unshift('XIII','XIX', 'XX');
+// romanNumerals.push(twentyThree);
+// console.log(romanNumerals);
+
+function popShift(arr) {
+    let popped = arr.pop(); // Change this line
+    let shifted = arr.shift(); // Change this line
+    return [shifted, popped];
+  }
+  
+  console.log(popShift(['challenge', 'is', 'not', 'complete']));
