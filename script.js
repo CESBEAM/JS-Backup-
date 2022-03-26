@@ -70,3 +70,10 @@
 
 
 
+var fruits = ["banana","mango","apple","oranges","grapes"];
+var number = 1;
+
+// fruits.push(number)
+fruits.pop(fruits)
+
+console.log(fruits)

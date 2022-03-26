@@ -16,8 +16,8 @@
 
 
 // check the username
-var username = "someAgent";
-if(username == "SomeAgent")
-               document.write("Welcome special agent"); 
-else
-       document.write("Access Denied!"); 
+// var username = "someAgent";
+// if(username == "SomeAgent")
+//                document.write("Welcome special agent"); 
+//        else
+//        document.write("Access Denied!"); 
